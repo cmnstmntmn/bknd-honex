@@ -19,7 +19,7 @@ const mainApp = createApp();
 // mainApp.route("/:username{@[a-z0-9_]+}", profileApp);
 
 // Bknd
-mainApp.all("/ceva", (c) => c.text("Something"));
+mainApp.all("/cevas", (c) => c.text("Something"));
 // mainApp.all("/api/*", (c) => c.var.app.fetch(c.req.raw));
 // mainApp.get("/admin/*", (c) => c.var.app.fetch(c.req.raw));
 

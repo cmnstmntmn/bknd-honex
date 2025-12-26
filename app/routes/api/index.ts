@@ -5,13 +5,6 @@ const app = new Hono();
 
 applyBkndMiddleware(app);
 
-// matches `/about/:name`
-app.all("/*", (c) => {
-	console.log(c.get("app"));
-
-	return c.json({
-		"your name is": "name",
-	});
-});
+app.all("/*", (c) => c.var.app.fetch(c.req.raw));
 
 export default app;
